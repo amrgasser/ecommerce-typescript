@@ -5,19 +5,18 @@ These are the notes from a meeting with the frontend developer that describe wha
 
 ## API Endpoints
 #### Products
-- Index 
-- Show
-- Create [token required]
-- [OPTIONAL] Top 5 most popular products 
-- [OPTIONAL] Products by category (args: product category)
+- Index    GET ```localhost:3000/products```
+- Show      GET ```localhost:3000/products/:id```
+- Create [token required] POST ```localhost:3000/products``` with requestbody {name: "name", price: "price"}
 
 #### Users
-- Index [token required]
-- Show [token required]
-- Create N[token required]
+- Index [token required] GET ```localhost:3000/users```
+- Show [token required] GET ```localhost:3000/user/:id```
+- Create N[token required] GET ```localhost:3000/users```
 
 #### Orders
-- Current Order by user (args: user id)[token required]
+- Current Order by user (args: user id)[token required] GET ```localhost:3000/orders```
+- Add Item to order POST ```localhost:3000/orders``` Request Body: {product_id, amount}
 - [OPTIONAL] Completed Orders by user (args: user id)[token required]
 
 ## Data Shapes

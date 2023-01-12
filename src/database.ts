@@ -8,16 +8,16 @@ const {
     POSTGRES_DB_TEST,
     POSTGRES_USER,
     POSTGRES_PASSWORD,
-    ENV
+    NODE_ENV
 } = process.env
 
 let client: Pool = new Pool({
     host: POSTGRES_HOST,
-    database: ENV === 'test' ? POSTGRES_DB_TEST : POSTGRES_DB,
+    database: NODE_ENV === 'test' ? POSTGRES_DB_TEST : POSTGRES_DB,
     user: POSTGRES_USER,
     password: POSTGRES_PASSWORD,
 });
 
-console.log(ENV);
+console.log(NODE_ENV);
 
 export default client
