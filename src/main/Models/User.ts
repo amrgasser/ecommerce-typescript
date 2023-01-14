@@ -9,7 +9,7 @@ const {
 } = process.env
 
 export type User = {
-    id?: string,
+    id?: number,
     firstName: string,
     lastname: string,
     password: string

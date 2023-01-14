@@ -39,7 +39,7 @@ userRoutes.post('/', async (req: express.Request, res: express.Response): Promis
             },
             process.env.TOKEN_SECRET as string
         );
-        res.status(201).send(token)
+        res.status(201).send({ token: token })
     } catch (error) {
         console.log(error);
 

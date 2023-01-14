@@ -20,6 +20,8 @@ describe("Product Model", () => {
             }
         );
 
+        console.log(res);
+
         expect(res).toEqual(
             {
                 id: 1,
